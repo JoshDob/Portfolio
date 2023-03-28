@@ -10,6 +10,6 @@
 
   .inner {
     height: 100%;
-    border: 1px solid red;
+    border: 0px solid red;
   }
 </style>

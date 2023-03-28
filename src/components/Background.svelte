@@ -24,12 +24,30 @@
   }
 
   .left {
-    background-color: #030708;
-    background-image: linear-gradient(45deg, #64807e, #060808);
+    background-color: #fcfafc;
+    background-image: linear-gradient(90deg, #fcbd03, #f00314);
   }
 
   .right {
-    background-color: #030708;
-    background-image: linear-gradient(135deg, #060808, #64807e);
+    background-color: #fcfafc;
+    background-image: linear-gradient(270deg, #002de3, #8f03ff);
+  }
+
+  .left,
+  .right {
+    background-size: 200% 200%;
+    animation: animatedGradient 8s ease infinite;
+  }
+
+  @keyframes animatedGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 </style>
