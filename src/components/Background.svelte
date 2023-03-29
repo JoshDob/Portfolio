@@ -1,11 +1,14 @@
 <!-- Frame.svelte -->
 <script>
+  import { selectedProject } from "../store";
+
+
   // You can add props or logic here if needed
 </script>
 
 <div class="wrap">
-  <div class="half left" />
-  <div class="half right" />
+  <div class="half left" style={`background-image:${$selectedProject.leftGradient}`} />
+  <div class="half right" style={`background-image:${$selectedProject.rightGradient}`} />
 </div>
 
 <style>
@@ -25,12 +28,12 @@
 
   .left {
     background-color: #fcfafc;
-    background-image: linear-gradient(90deg, #fcbd03, #f00314);
+    /* background-image: linear-gradient(90deg, #fcbd03, #f00314); */
   }
 
   .right {
     background-color: #fcfafc;
-    background-image: linear-gradient(270deg, #002de3, #8f03ff);
+    /* background-image: linear-gradient(270deg, #002de3, #8f03ff); */
   }
 
   .left,

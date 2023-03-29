@@ -1,5 +1,10 @@
+<script>
+
+  import { selectedProject } from "../store";
+
+</script>
 <div class="outer">
-  <div class="inner" />
+  <img class="inner" src={$selectedProject.src} alt={$selectedProject.title} />
 </div>
 
 <style>
@@ -9,7 +14,7 @@
   }
 
   .inner {
-    height: 100%;
-    border: 0px solid red;
+    width: 100%;
+    border: 1px solid red;
   }
 </style>

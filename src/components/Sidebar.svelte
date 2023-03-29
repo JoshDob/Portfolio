@@ -1,12 +1,16 @@
 <script>
   import { projectImages } from "../projectImages.js";
+  import { selectedProject } from "../store.js";
 </script>
 
 <div class="projects">
-  {#each projectImages as projectImage, index}
+  {#each projectImages as projectImage}
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div
       class="project-thumbnail"
+      class:selected={$selectedProject.title === projectImage.title}
       style="background-image: url({projectImage.src});"
+      on:click={() => selectedProject.set(projectImage)}
     />
   {/each}
 </div>
@@ -28,6 +32,10 @@
     height: 150px;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     width: 150px;
+  }
+
+  .selected {
+    border: 2px solid greenyellow;
   }
 
   .project-thumbnail:hover {
